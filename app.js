@@ -916,8 +916,7 @@
     const W = 440; // 画布宽度
     const grouped = groupByGrade(items);
     const grades = Object.keys(grouped);
-    const hasJunior = grades.some(g => isJuniorHigh(g));
-    const useJuniorTemplate = hasJunior;
+    const useJuniorTemplate = false; // 统一使用四列模板：年级 / 科目 / 难度 / 课程大纲
 
     // 计算表格区域高度：每行约 28px + 表头 34px
     let totalRows = 0;
@@ -937,100 +936,53 @@
 
     const totalH = pad + headerH + titleH + badgeH + tablePad + tableH + tablePad + footerH + pad;
 
-    // 构建表头
-    let theadSVG = '';
-    if (useJuniorTemplate) {
-      theadSVG = `
-        <rect x="0" y="0" width="${W}" height="${tableHeaderH}" fill="#1a1a2e"/>
-        <text x="20" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">年级</text>
-        <text x="65" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">天数</text>
-        <text x="115" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">讲次</text>
-        <text x="210" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">内容分段</text>
-        <text x="370" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">使用建议</text>
-        <line x1="0" y1="${tableHeaderH}" x2="${W}" y2="${tableHeaderH}" stroke="#333" stroke-width="1"/>
-      `;
-    } else {
-      theadSVG = `
-        <rect x="0" y="0" width="${W}" height="${tableHeaderH}" fill="#1a1a2e"/>
-        <text x="20" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">年级</text>
-        <text x="75" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">难度</text>
-        <text x="130" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">课程大纲</text>
-        <line x1="0" y1="${tableHeaderH}" x2="${W}" y2="${tableHeaderH}" stroke="#333" stroke-width="1"/>
-      `;
-    }
+    // 统一四列表头：年级 | 科目 | 难度 | 课程大纲
+    const theadSVG = `
+      <rect x="0" y="0" width="${W}" height="${tableHeaderH}" fill="#1a1a2e"/>
+      <text x="20" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">年级</text>
+      <text x="70" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">科目</text>
+      <text x="130" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">难度</text>
+      <text x="190" y="${tableHeaderH/2 + 5}" fill="#ffffff" font-size="13" font-weight="600">课程大纲</text>
+      <line x1="0" y1="${tableHeaderH}" x2="${W}" y2="${tableHeaderH}" stroke="#333" stroke-width="1"/>
+    `;
 
-    // 构建表格行
+    // 统一四列表格行：年级 | 科目 | 难度 | 课程大纲
     let tbodySVG = '';
     let yOffset = 0;
 
-    if (useJuniorTemplate) {
-      grades.forEach(grade => {
-        const lessons = grouped[grade];
-        lessons.sort((a,b) => (a.lessonNo||0) - (b.lessonNo||0));
+    grades.forEach(grade => {
+      const lessons = grouped[grade];
+      lessons.sort((a,b) => (a.lessonNo||0) - (b.lessonNo||0));
 
-        lessons.forEach((item, idx) => {
-          const content = extractContentSegment(item.title);
-          const suggestion = item.classType || '单独做一次课';
-          const dayLabel = `${idx + 1}`;
-          const bg = idx % 2 === 0 ? '#ffffff' : '#fafafa';
-          const y = yOffset * rowH;
+      lessons.forEach((item, idx) => {
+        const subject = item.subject || '';
+        const difficulty = item.classType || '培优';
+        const bg = idx % 2 === 0 ? '#ffffff' : '#fafafa';
+        const y = yOffset * rowH;
 
-          // 年级单元格（仅第一行绘制合并效果）
-          let gradeCell = '';
-          if (idx === 0 && lessons.length > 0) {
-            const cellH = lessons.length * rowH;
-            gradeCell = `
-              <rect x="0" y="${y}" width="50" height="${cellH}" fill="url(#gradeGrad_${grade})" stroke="#e0e0e0" stroke-width="1"/>
-              <text x="25" y="${y + cellH/2 + 5}" text-anchor="middle" fill="#333" font-size="14" font-weight="700">${grade.replace(/年级/g,'')}</text>
-              <text x="25" y="${y + cellH/2 + 20}" text-anchor="middle" fill="#666" font-size="10">年级</text>
-            `;
-          }
-
-          tbodySVG += `
-            ${gradeCell}
-            <rect x="${idx === 0 ? 50 : 0}" y="${y}" width="${W - (idx===0?50:0)}" height="${rowH}" fill="${bg}"/>
-            <line x1="0" y1="${y + rowH}" x2="${W}" y2="${y + rowH}" stroke="#eee" stroke-width="1"/>
-            ${idx === 0 ? `<line x1="50" y="${y}" x2="50" y2="${y + rowH}" stroke="#e0e0e0" stroke-width="1.5"/>` : ''}
-            <text x="72" y="${y + rowH/2 + 4}" fill="#e65100" font-size="11.5" font-weight="600">${dayLabel}</text>
-            <text x="115" y="${y + rowH/2 + 4}" fill="#333" font-size="11">第${item.lessonNo}讲 ${escapeSvgText(content.substring(0, 8))}</text>
-            <text x="210" y="${y + rowH/2 + 4}" fill="#444" font-size="11.5">${escapeSvgText(content)}</text>
-            <text x="370" y="${y + rowH/2 + 4}" fill="#666" font-size="10.5">${escapeSvgText(suggestion)}</text>
+        // 年级单元格（仅第一行绘制合并效果）
+        let gradeCell = '';
+        if (idx === 0 && lessons.length > 0) {
+          const cellH = lessons.length * rowH;
+          gradeCell = `
+            <rect x="0" y="${y}" width="50" height="${cellH}" fill="url(#gradeGrad_${grade})" stroke="#e0e0e0" stroke-width="1"/>
+            <text x="25" y="${y + cellH/2 + 5}" text-anchor="middle" fill="#333" font-size="14" font-weight="700">${grade.replace(/年级/g,'')}</text>
+            <text x="25" y="${y + cellH/2 + 20}" text-anchor="middle" fill="#666" font-size="10">年级</text>
           `;
-          yOffset++;
-        });
+        }
+
+        tbodySVG += `
+          ${gradeCell}
+          <rect x="${idx === 0 ? 50 : 0}" y="${y}" width="${W - (idx===0?50:0)}" height="${rowH}" fill="${bg}"/>
+          <line x1="0" y1="${y + rowH}" x2="${W}" y2="${y + rowH}" stroke="#eee" stroke-width="1"/>
+          ${idx === 0 ? `<line x1="50" y="${y}" x2="50" y2="${y + rowH}" stroke="#e0e0e0" stroke-width="1.5"/>` : ''}
+          <text x="70" y="${y + rowH/2 + 4}" fill="#2e7d32" font-size="11.5" font-weight="600">${escapeSvgText(subject)}</text>
+          <text x="130" y="${y + rowH/2 + 4}" fill="#1565c0" font-size="11.5" font-weight="600" text-anchor="middle">${difficulty}</text>
+          <text x="190" y="${y + rowH/2 + 4}" fill="#333" font-size="11.5">${escapeSvgText(extractContentSegment(item.title))}</text>
+        `;
+        yOffset++;
       });
-    } else {
-      grades.forEach(grade => {
-        const lessons = grouped[grade];
-        lessons.sort((a,b) => (a.lessonNo||0) - (b.lessonNo||0));
-
-        lessons.forEach((item, idx) => {
-          const difficulty = item.classType || '培优';
-          const bg = idx % 2 === 0 ? '#ffffff' : '#fafafa';
-          const y = yOffset * rowH;
-
-          let gradeCell = '';
-          if (idx === 0 && lessons.length > 0) {
-            const cellH = lessons.length * rowH;
-            gradeCell = `
-              <rect x="0" y="${y}" width="50" height="${cellH}" fill="url(#gradeGrad_${grade})" stroke="#e0e0e0" stroke-width="1"/>
-              <text x="25" y="${y + cellH/2 + 5}" text-anchor="middle" fill="#333" font-size="14" font-weight="700">${grade.replace(/年级/g,'')}</text>
-              <text x="25" y="${y + cellH/2 + 20}" text-anchor="middle" fill="#666" font-size="10">年级</text>
-            `;
-          }
-
-          tbodySVG += `
-            ${gradeCell}
-            <rect x="${idx === 0 ? 50 : 0}" y="${y}" width="${W - (idx===0?50:0)}" height="${rowH}" fill="${bg}"/>
-            <line x1="0" y1="${y + rowH}" x2="${W}" y2="${y + rowH}" stroke="#eee" stroke-width="1"/>
-            ${idx === 0 ? `<line x1="50" y="${y}" x2="50" y2="${y + rowH}" stroke="#e0e0e0" stroke-width="1.5"/>` : ''}
-            <text x="75" y="${y + rowH/2 + 4}" fill="#1565c0" font-size="12" font-weight="600" text-anchor="middle">${difficulty}</text>
-            <text x="130" y="${y + rowH/2 + 4}" fill="#333" font-size="11.5"><tspan fill="#c62828" font-weight="700">第${item.lessonNo}讲</tspan> ${escapeSvgText(extractContentSegment(item.title))}</text>
-          `;
-          yOffset++;
-        });
-      });
-    }
+    });
 
     // 为每个年级创建渐变定义
     let gradeGrads = '';
@@ -1040,7 +992,7 @@
 
     const tableY = pad + headerH + titleH + badgeH + tablePad;
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${totalH}" viewBox="0 0 ${W} ${totalH}">
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${totalH}" viewBox="0 0 ${W} ${totalH}" text-rendering="geometricPrecision" shape-rendering="crispEdges">
       <defs>
         ${gradeGrads}
         <linearGradient id="brandBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -1059,35 +1011,35 @@
 
       <!-- 品牌头部 -->
       <rect x="0" y="${pad}" width="${W}" height="${headerH}" fill="url(#brandBg)"/>
-      <text x="24" y="${pad + 30}" fill="#e65100" font-size="17" font-weight="700" letter-spacing="1">\u{1F4DA} \u672A\u6765\u4E66\u623F</text>
-      <text x="200" y="${pad + 26}" fill="#bf360c" font-size="10" letter-spacing="2" font-weight="500">FUTURE STUDIO</text>
+      <text x="24" y="${pad + 30}" fill="#e65100" font-size="17" font-weight="700" letter-spacing="1" text-rendering="geometricPrecision">\u{1F4DA} \u672A\u6765\u4E66\u623F</text>
+      <text x="200" y="${pad + 26}" fill="#bf360c" font-size="10" letter-spacing="2" font-weight="500" text-rendering="geometricPrecision">FUTURE STUDIO</text>
 
       <!-- 季节大标题 -->
-      <text x="${W/2}" y="${pad + headerH + 42}" text-anchor="middle" fill="${style.color}" font-size="32" font-weight="900" letter-spacing="3">2026${style.text}</text>
-      <text x="${W/2}" y="${pad + headerH + 68}" text-anchor="middle" fill="${style.color}" font-size="18" font-weight="600" letter-spacing="2">\u8BFE\u7A0B\u65B0\u4E0A</text>
+      <text x="${W/2}" y="${pad + headerH + 42}" text-anchor="middle" fill="${style.color}" font-size="30" font-weight="700" letter-spacing="3" text-rendering="geometricPrecision">2026${style.text}</text>
+      <text x="${W/2}" y="${pad + headerH + 68}" text-anchor="middle" fill="${style.color}" font-size="17" font-weight="600" letter-spacing="2" text-rendering="geometricPrecision">\u8BFE\u7A0B\u65B0\u4E0A</text>
 
       <!-- 学科标签 -->
       <rect x="20" y="${pad + headerH + titleH + 6}" width="4" height="26" fill="${style.color}" rx="1"/>
       <rect x="18" y="${pad + headerH + titleH + 4}" width="${badgeName.length * 16 + 40}" height="30" rx="15" fill="#f5f5f5"/>
-      <text x="32" y="${pad + headerH + titleH + 24}" fill="${style.color}" font-size="15" font-weight="700">${badgeName}</text>
+      <text x="32" y="${pad + headerH + titleH + 24}" fill="${style.color}" font-size="15" font-weight="700" text-rendering="geometricPrecision">${badgeName}</text>
 
       <!-- 表格区域背景 -->
       <rect x="0" y="${tableY}" width="${W}" height="${tableH + tablePad*2}" fill="#fafafa"/>
 
       <!-- 表格表头 -->
-      <g transform="translate(${(W - (useJuniorTemplate ? 430 : 350))/2}, ${tableY})">
+      <g transform="translate(${(W - 420)/2}, ${tableY})">
         ${theadSVG}
       </g>
 
       <!-- 表格内容 -->
-      <g transform="translate(${(W - (useJuniorTemplate ? 430 : 400))/2}, ${tableY + tableHeaderH})">
+      <g transform="translate(${(W - 420)/2}, ${tableY + tableHeaderH})">
         ${tbodySVG}
       </g>
 
       <!-- 底部装饰 -->
       <rect x="0" y="${totalH - footerH}" width="${W}" height="${footerH}" fill="url(#footerBg)"/>
-      <text x="${W/2}" y="${totalH - footerH + 22}" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="500">\u672A\u6765\u4E66\u623F \u00B7 \u8BA9\u5B66\u4E60\u66F4\u9AD8\u6548</text>
-      <text x="${W/2}" y="${totalH - footerH + 40}" text-anchor="middle" fill="#64b5f6" font-size="11">\u5171 ${items.length} \u8BB2 \u00B7 ${filters.season || ''}</text>
+      <text x="${W/2}" y="${totalH - footerH + 22}" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="500" text-rendering="geometricPrecision">\u672A\u6765\u4E66\u623F \u00B7 \u8BA9\u5B66\u4E60\u66F4\u9AD8\u6548</text>
+      <text x="${W/2}" y="${totalH - footerH + 40}" text-anchor="middle" fill="#64b5f6" font-size="11" text-rendering="geometricPrecision">\u5171 ${items.length} \u8BB2 \u00B7 ${filters.season || ''}</text>
     </svg>`;
   }
 
