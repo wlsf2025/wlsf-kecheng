@@ -881,23 +881,69 @@
       // 生成 SVG 字符串
       const svgString = buildSummarySVG(data, filters, style, subjectBadge, filterText);
 
-      // 创建 Blob 并触发下载
+      // SVG → Canvas → JPG 导出
+      const SCALE = 2; // 2x 分辨率，保证清晰度
       const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
       const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      const name = [filters.subject, filters.grade, filters.season].filter(Boolean).join('_') || '课程汇总';
-      link.download = `未来书房_${name}_课程上新.svg`;
-      link.href = url;
-      link.target = '_blank';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      setTimeout(() => URL.revokeObjectURL(url), 5000);
+
+      const img = new Image();
+      img.onload = function() {
+        URL.revokeObjectURL(url);
+
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth * SCALE;
+        canvas.height = img.naturalHeight * SCALE;
+        const ctx = canvas.getContext('2d');
+
+        // 白色背景（JPG 不透明，必须填底色）
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // 绘制 SVG 到 Canvas（2x 缩放保证清晰）
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+        // 转 JPG 并下载
+        canvas.toBlob(function(jpgBlob) {
+          const jpgUrl = URL.createObjectURL(jpgBlob);
+          const link = document.createElement('a');
+          const name = [filters.subject, filters.grade, filters.season].filter(Boolean).join('_') || '课程汇总';
+          link.download = `未来书房_${name}_课程上新.jpg`;
+          link.href = jpgUrl;
+          link.target = '_blank';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => URL.revokeObjectURL(jpgUrl), 5000);
+
+          // 恢复按钮
+          if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = `
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              保存海报图片
+            `;
+          }
+        }, 'image/jpeg', 0.92);
+      };
+
+      img.onerror = function() {
+        URL.revokeObjectURL(url);
+        console.error('SVG 转图片失败');
+        alert('图片生成失败，请稍后重试。');
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            保存海报图片
+          `;
+        }
+      };
+
+      img.src = url;
 
     } catch (err) {
       console.error('导出失败:', err);
       alert('图片生成失败，请稍后重试。');
-    } finally {
       if (btn) {
         btn.disabled = false;
         btn.innerHTML = `
