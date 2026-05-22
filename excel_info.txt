@@ -1,0 +1,1323 @@
+列名: ['年级', '学科', '班型', '版本', '讲次序号', '讲次名称']
+总行数: 2900
+
+【年级】共 7 个唯一值:
+  - 六年级
+  - 五年级
+  - 四年级
+  - 三年级
+  - 九年级
+  - 八年级
+  - 七年级
+
+【学科】共 6 个唯一值:
+  - 语文
+  - 数学
+  - 英语
+  - 物理
+  - 化学
+  - 科学
+
+【班型】共 4 个唯一值:
+  - 培优
+  - 同步
+  - 创新
+  - 尖子
+
+【版本】共 31 个唯一值:
+  - 人教版
+  - 北师版
+  - 青岛版(五四制)
+  - 西南大学版
+  - 青岛版
+  - 冀教版
+  - 苏教版
+  - 沪教版
+  - 通用版
+  - 外研版(3起点)
+  - 冀教版(3起点)
+  - 人教PEP版
+  - 科普版
+  - 译林版(3起点)
+  - 鲁科版(五四制)
+  - 外研版(3起点孙有中)
+  - 鲁教版(五四制)
+  - 沪科版
+  - 北京课改版
+  - 浙教版
+  - 苏科版
+  - 湘教版
+  - 华师版
+  - 译林版
+  - 外研版
+  - 仁爱版
+  - 鲁科版
+  - 教科版
+  - 沪粤版
+  - 科粤版
+  - 鲁教版
+
+【讲次序号】共 15 个唯一值:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 18
+  - 13
+  - 14
+
+【讲次名称】共 1211 个唯一值:
+  - 第1讲【阅】理解关键语句
+  - 第2讲【阅】学习环境描写
+  - 第3讲【作】学习聚焦情境
+  - 第4讲【阅】知人论世学古文
+  - 第5讲【阅】体会说明文语言
+  - 第6讲【作】学写演讲稿
+  - 第7讲【阅】学习简短的议论文
+  - 第8讲【阅】边读边想感受深
+  - 第9讲【作】变形记
+  - 第10讲【阅】细读点面场面现
+  - 第11讲【作】多彩的活动
+  - 第12讲【复习】期末复习
+  - 第1讲【阅】巧用表格作概述
+  - 第2讲【阅】梳理信息找要点
+  - 第3讲【作】转变视角设情节
+  - 第4讲【阅】学习重点段
+  - 第5讲【阅】认识作者的表达目的
+  - 第6讲【作】____的自述
+  - 第7讲【阅】学习古典文学名著
+  - 第8讲【阅】借物抒情须细品
+  - 第9讲【作】我的心爱之物
+  - 第10讲【阅】提高阅读的速度
+  - 第11讲【作】“漫画”老师
+  - 第1讲【阅】学习把握故事梗概
+  - 第2讲【作】学习“变身”想象
+  - 第3讲【阅】学习顶真、反复、引用
+  - 第4讲【作】学习扩写
+  - 第5讲【阅】学习评价人物
+  - 第6讲【作】比较之中找特点
+  - 第7讲【阅】学习两种段式
+  - 第8讲【作】推荐一个好地方
+  - 第9讲【阅】学习略读和浏览
+  - 第10讲【作】学习介绍一群人
+  - 第11讲【阅】走进词语万花筒
+  - 第1讲【阅】养成批注好习惯 
+  - 第2讲【作】学习神态描写
+  - 第3讲【阅】学习概括段落大意
+  - 第4讲【作】学习心理描写
+  - 第5讲【阅】学习文题背后的技巧
+  - 第6讲【作】学习写日记
+  - 第7讲【阅】学习比喻、拟人、设问
+  - 第8讲【作】学习写一个人
+  - 第9讲【阅】认识几种叙述顺序
+  - 第10讲【作】学写总分段落
+  - 第11讲【阅】学会找到因果关系
+  - 第1讲观察物体
+  - 第2讲混合计算I
+  - 第3讲混合计算II
+  - 第4讲毫米、分米和千米
+  - 第5讲曹冲称象的故事
+  - 第6讲多位数乘一位数I
+  - 第7讲多位数乘一位数II
+  - 第8讲线和角I
+  - 第9讲线和角II
+  - 第10讲分数的初步认识I
+  - 第11讲分数的初步认识II
+  - 第12讲数学广角：搭配问题
+  - 第1讲混合运算
+  - 第2讲测量（二）
+  - 第3讲大数加与减（二）I
+  - 第4讲大数加与减（二）II
+  - 第5讲我们生活的空间（一）
+  - 第6讲认识图形
+  - 第7讲乘除法的应用（二）I
+  - 第8讲乘除法的应用（二）II
+  - 第9讲认识小数I
+  - 第10讲认识小数II
+  - 第11讲调查与记录
+  - 第12讲探索年月日的秘密
+  - 第1讲 计算器
+  - 第2讲 运算律初步
+  - 第3讲 几何计数
+  - 第4讲 小数的意义和性质初步
+  - 第5讲 小数的加法和减法初步
+  - 第6讲 和倍问题
+  - 第7讲 差倍问题
+  - 第8讲 和差问题
+  - 第9讲 小数乘法初步
+  - 第10讲 小数除法初步
+  - 第11讲 逻辑推理
+  - 第12讲 期末测试
+  - 第1讲字母表示数
+  - 第2讲运算律I
+  - 第3讲运算律II
+  - 第4讲认识多边形I
+  - 第5讲认识多边形II
+  - 第6讲小数的意义和性质I
+  - 第7讲小数的意义和性质II
+  - 第8讲小数加减法
+  - 第9讲小数乘法I
+  - 第10讲小数乘法II
+  - 第11讲小数除法I
+  - 第12讲小数除法II
+  - 第1讲 大数的认识
+  - 第2讲 线的认识
+  - 第3讲 三位数乘两位数初步
+  - 第4讲 除数是两位数的除法口算
+  - 第5讲 树形图
+  - 第9讲 面积计算提高
+  - 第10讲 除法竖式谜（一）
+  - 第11讲 逻辑推理初步
+  - 第1讲 因数倍数不分家
+  - 第3讲 认识更大的数（一）
+  - 第10讲 平均数和条形统计图（一）
+  - 第11讲 页码问题
+  - 第1讲 除法竖式谜（一）
+  - 第10讲 逻辑推理
+  - 第2讲 加减乘除的意义
+  - 第3讲 页码问题
+  - 第4讲 大数的认识
+  - 第9讲 容斥原理
+  - 第10讲 巧填算符
+  - 第1讲 长方体和正方体（一）
+  - 第2讲 长方体和正方体（二）
+  - 第3讲 分数比较大小
+  - 第4讲 分数乘法初步
+  - 第5讲 分数除法初步
+  - 第6讲 比的认识
+  - 第7讲 流水行船
+  - 第8讲 牛吃草问题
+  - 第9讲 整除
+  - 第10讲 物不知数问题（一）
+  - 第11讲 物不知数问题（二）
+  - 第1讲分数加减法（二）I
+  - 第2讲分数加减法（二）II
+  - 第3讲长方体和正方体I
+  - 第4讲长方体和正方体II
+  - 第5讲长方体和正方体III
+  - 第6讲分数乘法I
+  - 第7讲分数乘法II
+  - 第8讲分数除法I
+  - 第9讲分数除法II
+  - 第10讲比
+  - 第11讲分数四则混合运算I
+  - 第12讲分数四则混合运算II
+  - 第1讲 小数乘法初步
+  - 第2讲 小数除法初步
+  - 第3讲 盈亏问题
+  - 第4讲 多边形的面积初步
+  - 第5讲 逻辑推理进阶
+  - 第6讲 还原问题
+  - 第7讲 四则混合运算
+  - 第8讲 火车问题
+  - 第9讲 几何计数
+  - 第10讲 年龄问题
+  - 第11讲 复杂和差倍
+  - 第3讲 方程初步
+  - 第5讲 因数倍数不分家
+  - 第8讲 定义新运算
+  - 第1讲小数乘法I
+  - 第2讲小数乘法II
+  - 第3讲小数乘法III
+  - 第4讲对称、平移与旋转
+  - 第5讲小数除法I
+  - 第6讲小数除法II
+  - 第7讲小数除法III
+  - 第8讲简易方程I
+  - 第9讲简易方程II
+  - 第10讲多边形的面积I
+  - 第11讲多边形的面积II
+  - 第12讲因数与倍数
+  - 第3讲 方程（一）
+  - 第4讲 多边形的面积（一）
+  - 第5讲 盈亏问题
+  - 第10讲 火车问题
+  - 第1讲 小数的意义和性质初步
+  - 第2讲 小数的加法和减法初步
+  - 第3讲 小数乘法初步
+  - 第4讲 小数除法初步
+  - 第5讲 多边形的面积初步
+  - 第9讲 火车问题
+  - 第3讲 简易方程（一）
+  - 第4讲 平行四边形和梯形
+  - 第6讲 整除
+  - 第7讲 盈亏问题
+  - 第1讲 小数巧算
+  - 第3讲 因数倍数不分家
+  - 第4讲 认识分数
+  - 第5讲 数与形
+  - 第1讲小数除法I
+  - 第2讲小数除法II
+  - 第3讲小数除法III
+  - 第4讲倍数与因数I
+  - 第5讲倍数与因数II
+  - 第6讲多边形的面积I
+  - 第7讲多边形的面积II
+  - 第8讲分数的意义I
+  - 第9讲分数的意义II
+  - 第10讲分数的意义III
+  - 第11讲分数的意义IV
+  - 第12讲组合图形的面积
+  - 第4讲小数除法I
+  - 第5讲小数除法II
+  - 第6讲小数除法III
+  - 第7讲多边形的面积I
+  - 第8讲多边形的面积II
+  - 第9讲简易方程I
+  - 第10讲简易方程II
+  - 第11讲简易方程III
+  - 第12讲简易方程IV
+  - 第1讲 分数比较大小
+  - 第2讲 分数乘法初步
+  - 第3讲 分数除法初步
+  - 第4讲 比的认识
+  - 第5讲 圆的认识
+  - 第6讲 分数巧算（一）
+  - 第1讲分数比较大小
+  - 第2讲分数乘法初步
+  - 第3讲分数除法初步
+  - 第4讲比的认识
+  - 第5讲圆的认识
+  - 第6讲分数巧算（一）
+  - 第7讲流水行船
+  - 第8讲牛吃草问题
+  - 第9讲整除
+  - 第10讲物不知数问题（一）
+  - 第11讲物不知数问题（二）
+  - 第12讲期末测试
+  - 第1讲分数乘法I
+  - 第2讲分数乘法II
+  - 第3讲分数除法I
+  - 第4讲分数除法II
+  - 第5讲比
+  - 第6讲圆I
+  - 第7讲圆II
+  - 第8讲圆III
+  - 第9讲分数四则混合运算I
+  - 第10讲分数四则混合运算II
+  - 第11讲百分数（一）I
+  - 第12讲百分数（一）II
+  - 第2讲 分数的裂项
+  - 第3讲 经典面积模型
+  - 第4讲 牛吃草问题
+  - 第8讲 概率初步
+  - 第1讲圆I
+  - 第2讲圆II
+  - 第3讲圆III
+  - 第4讲分数混合运算I
+  - 第5讲分数混合运算II
+  - 第6讲观察物体
+  - 第7讲百分数I
+  - 第8讲百分数II
+  - 第9讲数据处理
+  - 第10讲比的认识
+  - 第11讲百分数的应用I
+  - 第12讲百分数的应用II
+  - 第3讲分数乘法III
+  - 第4讲分数除法I
+  - 第5讲分数除法II
+  - 第6讲分数除法III
+  - 第7讲比
+  - 第8讲圆I
+  - 第9讲圆II
+  - 第10讲圆III
+  - 第1讲 Sports (1)
+  - 第2讲 Sports (2)
+  - 第3讲 Chores at home
+  - 第4讲 My week
+  - 第5讲 Weather (1)
+  - 第6讲 Weather (2)
+  - 第7讲 Seasons (1)
+  - 第8讲 Seasons (2)
+  - 第9讲 Months
+  - 第10讲 Travel 
+  - 第11讲 Road safety
+  - 第12讲 At the restaurant
+  - 第1讲 Greetings
+  - 第2讲 More about me
+  - 第3讲 My new friends
+  - 第4讲 Making friends (1)
+  - 第5讲 Making friends (2)
+  - 第6讲 Family
+  - 第7讲 Plants around us
+  - 第8讲 Colours
+  - 第9讲 Useful numbers
+  - 第10讲 My school (1)
+  - 第11讲 My school (2)
+  - 第12讲 Positions
+  - 第1讲 Module 1 China and the US
+  - 第2讲 Module 2 China
+  - 第3讲 Module 3 Hobbies
+  - 第4讲 Module 4 Festivals
+  - 第5讲 Module 5 Pen Friends
+  - 第6讲 Module 6 Possessions
+  - 第7讲 Module 7 Animals
+  - 第8讲 Module 8 Habits and Frequency
+  - 第9讲 Module 9 Trips
+  - 第10讲 Module 10 Rules
+  - 第1讲 Unit 1 Li Ming Goes to Canada (1)
+  - 第2讲 Unit 1 Li Ming Goes to Canada (2)
+  - 第3讲 Unit 2 School in Canada (1)
+  - 第4讲 Unit 2 School in Canada (2)
+  - 第5讲 Recycle 1
+  - 第6讲 Unit 3 Winter in Canada (1)
+  - 第7讲 Unit 3 Winter in Canada (2)
+  - 第8讲 Unit 4 Christmas (1)
+  - 第9讲 Unit 4 Christmas (2)
+  - 第10讲 Recycle 2
+  - 第1讲 Unit 1 How can I get there?
+  - 第2讲 Unit 2 Ways to go to school
+  - 第3讲 Unit 3 My weekend plan
+  - 第4讲 Recycle 1
+  - 第5讲 Review 1
+  - 第6讲 Unit 4 I have a pen pal
+  - 第7讲 Unit 5 What does he do?
+  - 第8讲 Unit 6 How do you feel?
+  - 第9讲 Recycle 2
+  - 第10讲 Review 2
+  - 第1讲 Lesson 1 Are you going to have a birthday party?
+  - 第2讲 Lesson 2 What are you going to do tomorrow?
+  - 第3讲 Lesson 3 It will be sunny this Sunday. 
+  - 第4讲 Lesson 4 What kind of books will you buy?
+  - 第5讲 Lesson 5 Revision
+  - 第6讲 Lesson 6 It's on the fifth floor.
+  - 第7讲 Lesson 7 What's the date today?
+  - 第8讲 Lesson 8 Merry Christmas!
+  - 第9讲 Lesson 9 Were you at school yesterday?
+  - 第10讲 Lesson 10 Revision
+  - 第1讲 Unit 1 The king's new clothes
+  - 第2讲 Unit 2 What a day!
+  - 第3讲 Unit 3 Holiday fun
+  - 第4讲 Unit 4 Then and now
+  - 第6讲 Unit 5 Signs
+  - 第7讲 Unit 6 Keep our city clean
+  - 第8讲 Unit 7 Protect the Earth
+  - 第9讲 Unit 8 Chinese New Year
+  - 第1讲 Unit 1 Teachers' Day (1)
+  - 第2讲 Unit 1 Teachers' Day (2)
+  - 第3讲 Unit 2 Feelings (1)
+  - 第4讲 Unit 2 Feelings (2)
+  - 第5讲 Unit 3 Birthday (1)
+  - 第6讲 Unit 3 Birthday (2)
+  - 第7讲 Unit 4 School in Canada (1)
+  - 第8讲 Unit 4 School in Canada (2)
+  - 第9讲 Unit 5 Sports (1)
+  - 第10讲 Unit 5 Sports (2)
+  - 第11讲 Unit 6 Spring Festival (1)
+  - 第12讲 Unit 6 Spring Festival (2)
+  - 第1讲 Module 1 London
+  - 第2讲 Module 2 Shopping
+  - 第3讲 Module 3 Weekend Activities
+  - 第4讲 Module 4 Possessions
+  - 第5讲 Module 5 Numbers
+  - 第6讲 Module 6 Abilities
+  - 第7讲 Module 7 Inability
+  - 第8讲 Module 8 School
+  - 第9讲 Module 9 Feelings
+  - 第10讲 Module 10 Locations and Rules
+  - 第1讲 Unit 1 My Family (1)
+  - 第2讲 Unit 1 My Family (2)
+  - 第3讲 Unit 2 My Country and English-speaking Countries (1)
+  - 第4讲 Unit 2 My Country and English-speaking Countries (2)
+  - 第6讲 Unit 3 A Travel Plan (1)
+  - 第7讲 Unit 3 A Travel Plan (2)
+  - 第8讲 Unit 4 Jenny and Danny Come to China (1)
+  - 第9讲 Unit 4 Jenny and Danny Come to China (2)
+  - 第1讲 Unit 1 What's he like?
+  - 第2讲 Unit 2 My week
+  - 第3讲 Unit 3 What would you like?
+  - 第6讲 Unit 4 What can you do?
+  - 第7讲 Unit 5 There is a big bed
+  - 第8讲 Unit 6 In a nature park
+  - 第1讲 Lesson 1 What is she doing?
+  - 第2讲 Lesson 2 Don't be late next time! 
+  - 第3讲 Lesson 3 A computer has a keyboard.
+  - 第4讲 Lesson 4 Does Jim like swimming?
+  - 第5讲 Lesson 5 What does he like?
+  - 第6讲 Lesson 6 Revision
+  - 第7讲 Lesson 7 What would you like?
+  - 第8讲 Lesson 8 Would you like some potatoes?
+  - 第9讲 Lesson 9 How many cakes do you want?
+  - 第10讲 Lesson 10 There is a horse under the tree.
+  - 第11讲 Lesson 11 There isn't any bread in the fridge.
+  - 第12讲 Lesson 12 Revision
+  - 第1讲 Unit 1 Goldilocks and the three bears
+  - 第2讲 Unit 2 A new student
+  - 第3讲 Unit 3 Our animal friends
+  - 第4讲 Unit 4 Hobbies
+  - 第6讲 Unit 5 What do they do?
+  - 第7讲 Unit 6 My e-friend
+  - 第8讲 Unit 7 At weekends
+  - 第9讲 Unit 8 At Christmas
+  - 第1讲 Unit 1 School life
+  - 第2讲 Unit 2 Days of the week
+  - 第3讲 Unit 3 Colourful seasons
+  - 第4讲 Unit 4 Weather and our life
+  - 第6讲 Unit 5 Hobbies
+  - 第7讲 Unit 6 Family members
+  - 第8讲 Unit 7 Ways of communication
+  - 第9讲 Review 2
+  - 第10讲 综合训练
+  - 第1讲 Unit 1 I love sports
+  - 第2讲 Unit 2 Helping at home
+  - 第3讲 Unit 3 What's the weather like? 
+  - 第4讲 Review 1
+  - 第5讲 综合训练 1
+  - 第6讲 Unit 4 Wonderful seasons 
+  - 第7讲 Unit 5 Let's go!
+  - 第8讲 Unit 6 Find your way
+  - 第10讲 综合训练 2
+  - 第1讲 Unit 1 School life (1)
+  - 第2讲 Unit 1 School life (2)
+  - 第3讲 Unit 2 School rules (1)
+  - 第4讲 Unit 2 School rules (2)
+  - 第5讲 Unit 3 Sports (1)
+  - 第6讲 Unit 3 Sports (2)
+  - 第7讲 Unit 4 Jobs (1)
+  - 第8讲 Unit 4 Jobs (2)
+  - 第9讲 Unit 5 Meet my family (1)
+  - 第10讲 Unit 5 Meet my family (2)
+  - 第11讲 Unit 6 More about me (1)
+  - 第12讲 Unit 6 More about me (2)
+  - 第1讲 Unit 1 Helping at home (1)
+  - 第2讲 Unit 1 Helping at home (2)
+  - 第3讲 Unit 2 My friends (1)
+  - 第4讲 Unit 2 My friends (2)
+  - 第5讲 Unit 3 Places we live in (1)
+  - 第6讲 Unit 3 Places we live in (2)
+  - 第7讲 Unit 4 Helping in the community (1)
+  - 第8讲 Unit 4 Helping in the community (2)
+  - 第9讲 Unit 5 The weather and us (1)
+  - 第10讲 Unit 5 The weather and us (2)
+  - 第11讲 Unit 6 Changing for the seasons (1)
+  - 第12讲 Unit 6 Changing for the seasons (2)
+  - 第1讲 Unit 1 Our school subjects
+  - 第2讲 Unit 2 My day
+  - 第3讲 Unit 3 My week
+  - 第4讲 Unit 4 I like sport
+  - 第6讲 Unit 5 Different toys, same fun
+  - 第7讲 Unit 6 Weather
+  - 第8讲 Unit 7 Seasons
+  - 第9讲 Unit 8 What we wear
+  - 第1讲 Unit 1 Greetings 
+  - 第2讲 Unit 2 Friends 
+  - 第3讲 Unit 3 Parts of the body 
+  - 第4讲 Unit 4 School things
+  - 第6讲 Unit 5 Colours around us
+  - 第7讲 Unit 6 Numbers
+  - 第8讲 Unit 7 Family
+  - 第1讲 Welcome to school
+  - 第2讲 Unit 1 Let's be friends! 
+  - 第3讲 Unit 2 My school things 
+  - 第4讲 Unit 3 It's a colourful world! 
+  - 第6讲 Unit 4 Fun with numbers
+  - 第7讲 Unit 5 We're family
+  - 第8讲 Unit 6 My sweet home 
+  - 第1讲 Unit 1 Hello! (1)
+  - 第2讲 Unit 1 Hello! (2)
+  - 第3讲 Unit 2 My school (1)
+  - 第4讲 Unit 2 My school (2)
+  - 第5讲 Unit 3 Colours and letters (1)
+  - 第6讲 Unit 3 Colours and letters (2)
+  - 第7讲 Unit 4 My friends (1)
+  - 第8讲 Unit 4 My friends (2)
+  - 第9讲 Unit 5 About me (1)
+  - 第10讲 Unit 5 About me (2)
+  - 第11讲 Unit 6 My family (1)
+  - 第12讲 Unit 6 My family (2)
+  - 第1讲 Unit 1 Making friends (1)
+  - 第2讲 Unit 1 Making friends (2)
+  - 第3讲 Unit 2 Different families (1)
+  - 第4讲 Unit 2 Different families (2)
+  - 第5讲 Unit 3 Amazing animals (1)
+  - 第6讲 Unit 3 Amazing animals (2)
+  - 第7讲 Unit 4 Plants around us (1)
+  - 第8讲 Unit 4 Plants around us (2)
+  - 第9讲 Unit 5 The colourful world (1)
+  - 第10讲 Unit 5 The colourful world (2)
+  - 第11讲 Unit 6 Useful numbers (1)
+  - 第12讲 Unit 6 Useful numbers (2)
+  - 第1讲 Unit 1 Hello
+  - 第2讲 Unit 2 My name
+  - 第3讲 Unit 3 Visit to the farm
+  - 第4讲 Unit 4 My body
+  - 第5讲 Unit 5 Animals around us
+  - 第6讲 Unit 6 My schoolbag
+  - 第7讲 Unit 7 Colours
+  - 第8讲 Unit 8 My age
+  - 第9讲 Unit 9 My family
+  - 第10讲 Unit 10 My new friends
+  - 第11讲 Unit 11 Maths in everyday life
+  - 第12讲 Unit 12 Revision
+  - 第1讲 Unit 1 Hello!
+  - 第2讲 Unit 2 What's your name?
+  - 第3讲 Unit 3 Are you Su Hai?
+  - 第4讲 Unit 4 This is my friend
+  - 第6讲 Unit 5 She's my mother
+  - 第7讲 Unit 6 Is he your grandpa?
+  - 第8讲 Unit 7 Happy Birthday!
+  - 第9讲 Unit 8 I can do this for you
+  - 第1讲 现代诗歌诵读概览
+  - 第2讲 《敬业与乐业 》《就英法联军远征中国致巴特勒上尉的信》精读
+  - 第3讲 《岳阳楼记》精读
+  - 第4讲 《醉翁亭记》精读
+  - 第5讲 《湖心亭看雪》精读
+  - 第6讲 《诗词三首》精读
+  - 第7讲 《故乡》精读
+  - 第8讲 《我的叔叔于勒》精读
+  - 第9讲 《中国人失掉自信力了吗 》《怀疑与学问 》精读
+  - 第10讲 课外古诗词诵读概览
+  - 第11讲 整本书阅读《艾青诗选》
+  - 第12讲 整本书阅读《水浒传》
+  - 第1讲 新闻阅读概览
+  - 第2讲 《藤野先生》精读
+  - 第3讲 《三峡》《与朱元思书》精读
+  - 第4讲 《短文二篇》精读
+  - 第5讲 《唐诗五首》精读
+  - 第6讲 《背影》精读
+  - 第7讲 《中国石拱桥》《苏州园林》精读
+  - 第8讲 《孟子》三章精读
+  - 第9讲 《愚公移山》《周亚夫军细柳》精读
+  - 第10讲 《诗词五首》精读
+  - 第11讲 整本书阅读《红星照耀中国》
+  - 第12讲 整本书阅读《红岩》
+  - 第1讲 《春》精读
+  - 第2讲 《济南的冬天》精读
+  - 第3讲 《古代诗歌四首》精读
+  - 第4讲 《秋天的怀念》精读
+  - 第5讲 《世说新语》二则精读
+  - 第6讲 《从百草园到三味书屋》精读
+  - 第7讲 《论语》十二章精读
+  - 第8讲 《诫子书》精读
+  - 第9讲 文言文阅读综合
+  - 第10讲 近现代散文阅读综合
+  - 第11讲 整本书阅读《朝花夕拾》
+  - 第12讲 整本书阅读《西游记》
+  - 第一讲 有理数的概念
+  - 第二讲 有理数的四则运算
+  - 第三讲 有理数的运算综合
+  - 第四讲 整式的概念
+  - 第五讲 整式的加减
+  - 第六讲 阶段复习１
+  - 第七讲 整式化简综合
+  - 第八讲 一元一次方程的解法
+  - 第九讲 一元一次方程的应用
+  - 第十讲 含参一元一次方程
+  - 第十一讲 几何图形
+  - 第十二讲 阶段复习2
+  - 第一讲 几何图形
+  - 第二讲 有理数的概念
+  - 第三讲 有理数的加减
+  - 第四讲 有理数的乘除
+  - 第五讲 有理数的运算综合
+  - 第六讲 期中复习
+  - 第七讲 整式的概念
+  - 第八讲 整式的加减
+  - 第九讲 整式化简综合1
+  - 第十讲 整式化简综合2
+  - 第十一讲 数据的收集与整理
+  - 第十二讲 期末复习
+  - 第一讲 三角形
+  - 第二讲 全等三角形
+  - 第三讲 全等三角形的判定
+  - 第四讲 阶段复习1
+  - 第五讲 轴对称
+  - 第六讲 勾股定理
+  - 第七讲 实数
+  - 第八讲 阶段复习2
+  - 第九讲 平面直角坐标系
+  - 第十讲 函数
+  - 第十一讲 一次函数
+  - 第十二讲 阶段复习3
+  - 第六讲 整式化简综合
+  - 第七讲 一元一次方程的解法
+  - 第八讲 一元一次方程的应用
+  - 第九讲 含参一元一次方程
+  - 第十讲 几何图形
+  - 第十一讲 直线、射线、线段
+  - 第十二讲 角
+  - 第四讲 阶段复习１
+  - 第七讲 解一元一次方程
+  - 第九讲 一元一次方程综合
+  - 第四讲 几何图形
+  - 第五讲 直线、射线、线段
+  - 第六讲 角
+  - 第九讲 整式化简综合
+  - 第十讲 解一元一次方程
+  - 第十一讲 一元一次方程的应用
+  - 第十二讲 一元一次方程综合
+  - 第四讲 实数
+  - 第五讲 整式的概念
+  - 第六讲 整式的加减
+  - 第八讲 解一元一次方程
+  - 第九讲 二元一次方程组
+  - 第七讲 几何图形
+  - 第八讲 直线、射线、线段
+  - 第九讲 角
+  - 第十讲 相交线
+  - 第十一讲 平行线
+  - 第十二讲 平行线综合
+  - 第三讲 有理数的四则运算
+  - 第四讲 有理数的运算综合
+  - 第二讲 多边形
+  - 第四讲 全等三角形综合
+  - 第六讲 等腰三角形
+  - 第七讲 等腰三角形综合
+  - 第八讲 幂的运算
+  - 第九讲 整式的乘法
+  - 第十讲 乘法公式
+  - 第十一讲 因式分解
+  - 第十二讲 分式
+  - 第一讲 全等三角形的判定
+  - 第二讲 全等三角形综合
+  - 第三讲 轴对称
+  - 第四讲 等腰三角形
+  - 第五讲 等腰三角形综合
+  - 第六讲 尺规作图
+  - 第七讲 勾股定理
+  - 第八讲 实数
+  - 第十二讲 一次函数与二元一次方程
+  - 第一讲 勾股定理
+  - 第二讲 实数
+  - 第三讲 二次根式
+  - 第四讲 二次根式的运算
+  - 第五讲 平面直角坐标系
+  - 第六讲 二元一次方程组
+  - 第七讲 二元一次方程组的应用
+  - 第八讲 函数
+  - 第九讲 一次函数
+  - 第十讲 一次函数与二元一次方程
+  - 第十一讲 数据的分析
+  - 第十二讲 平行线的证明
+  - 第一讲 平面直角坐标系
+  - 第二讲 函数
+  - 第三讲 一次函数
+  - 第四讲 一次函数与二元一次方程
+  - 第五讲 三角形
+  - 第六讲 命题与证明
+  - 第七讲 全等三角形的判定
+  - 第八讲 全等三角形综合
+  - 第九讲 轴对称
+  - 第十讲 等腰三角形
+  - 第十一讲 等腰三角形综合
+  - 第十二讲 尺规作图
+  - 第一讲 因式分解
+  - 第二讲 分式
+  - 第三讲 分式的运算
+  - 第四讲 分式方程的应用
+  - 第五讲 阶段复习1
+  - 第六讲 数据的分析
+  - 第七讲 旋转
+  - 第九讲 平行四边形的性质
+  - 第十讲 平行四边形的判定
+  - 第十一讲 三角形的中位线
+  - 第十二讲 多边形
+  - 第一讲 分式
+  - 第二讲 分式的运算
+  - 第三讲 实数
+  - 第四讲 二次根式
+  - 第五讲 二次根式的运算
+  - 第六讲 三角形
+  - 第七讲 三角形的外角
+  - 第八讲 全等三角形
+  - 第九讲 全等三角形的判定
+  - 第十讲 轴对称
+  - 第十一讲 等腰三角形
+  - 第十二讲 全等三角形综合
+  - 第一讲 全等三角形
+  - 第二讲 全等三角形的判定
+  - 第三讲 分式
+  - 第四讲 分式的运算
+  - 第七讲 全等三角形综合
+  - 第八讲 轴对称综合
+  - 第九讲 实数
+  - 第十讲 勾股定理
+  - 第十一讲 不等式和不等式组
+  - 第十二讲 平面直角坐标系
+  - 第三讲 全等三角形
+  - 第四讲 全等三角形的判定
+  - 第五讲 实数
+  - 第六讲 二次根式
+  - 第七讲 二次根式的运算
+  - 第八讲 轴对称
+  - 第九讲 尺规作图和中心对称
+  - 第十一讲 全等和等腰综合
+  - 第十二讲 勾股定理
+  - 第二讲 三角形的外角
+  - 第五讲 垂直平分线和角平分线
+  - 第七讲 直角三角形
+  - 第八讲 勾股定理
+  - 第九讲 不等式和不等式组
+  - 第十讲 平面直角坐标系
+  - 第十一讲 函数
+  - 第十二讲 一次函数
+  - 第一讲 三角形中的线段和角
+  - 第四讲 垂直平分线和角平分线
+  - 第五讲 等腰三角形
+  - 第六讲 全等三角形综合
+  - 第七讲 全等三角形
+  - 第八讲 全等三角形的判定
+  - 第九讲 等腰三角形
+  - 第十讲 垂直平分线和角平分线
+  - 第十一讲 直角三角形
+  - 第一讲 实数
+  - 第二讲 幂的运算
+  - 第三讲 整式的乘法
+  - 第四讲 乘法公式
+  - 第五讲 因式分解
+  - 第六讲 全等三角形
+  - 第八讲 等腰三角形
+  - 第九讲 逆命题与逆定理
+  - 第十讲 尺规作图
+  - 第十一讲 全等三角形综合
+  - 第六讲 函数
+  - 第七讲 一次函数
+  - 第八讲 二元一次方程组
+  - 第九讲 二元一次方程组的应用
+  - 第四讲 轴对称
+  - 第七讲 幂的运算
+  - 第八讲 整式的乘法
+  - 第九讲 乘法公式
+  - 第十讲 因式分解
+  - 第十一讲 分式
+  - 第十二讲 分式的运算
+  - 第六讲 三角形的外角
+  - 第十二讲 轴对称综合
+  - 第一讲 平行线分线段成比例
+  - 第二讲 相似三角形
+  - 第三讲 二次函数
+  - 第四讲 二次函数的性质
+  - 第五讲 二次函数的相关计算
+  - 第六讲 反比例函数
+  - 第七讲 锐角三角函数
+  - 第八讲 圆
+  - 第九讲 圆周角
+  - 第十讲 与圆有关的位置关系
+  - 第十一讲 弧长和扇形
+  - 第十二讲 位似及相似应用
+  - 第一讲 二次函数
+  - 第二讲 二次函数的性质
+  - 第三讲 二次函数的相关计算
+  - 第四讲 反比例函数
+  - 第五讲 圆
+  - 第六讲 圆周角
+  - 第七讲 与圆有关的位置关系
+  - 第八讲 弧长和扇形
+  - 第九讲 平行线分线段成比例
+  - 第十讲 相似三角形
+  - 第十一讲 位似及相似应用
+  - 第十二讲 锐角三角函数
+  - 第一讲 反比例函数
+  - 第二讲 锐角三角函数
+  - 第三讲 阶段复习1
+  - 第四讲 二次函数的图象
+  - 第五讲 二次函数的性质
+  - 第六讲 怎么求二次函数的解析式
+  - 第七讲 概率初步
+  - 第九讲 圆有哪些基本性质
+  - 第十讲 与圆有关的计算
+  - 第十一讲 直线和圆的位置关系
+  - 第三讲 二次函数的图象
+  - 第五讲 怎么求二次函数的解析式
+  - 第八讲 圆有哪些性质
+  - 第九讲 与圆有关的计算
+  - 第十讲 直线和圆的位置关系
+  - 第十一讲 图形的旋转
+  - 第十二讲 概率初步
+  - 第一讲 怎么解一元二次方程
+  - 第二讲 不解方程能分析根吗
+  - 第六讲 圆有哪些性质
+  - 第七讲 与圆有关的计算
+  - 第八讲 直线和圆的位置关系
+  - 第九讲 反比例函数
+  - 第十讲 平行线分线段成比例
+  - 第十一讲 相似三角形
+  - 第一讲 二次函数的图象
+  - 第三讲 怎么求二次函数的解析式
+  - 第四讲 图形的旋转
+  - 第五讲 圆有哪些性质
+  - 第六讲 与圆有关的计算
+  - 第七讲 直线和圆的位置关系
+  - 第八讲 平行线分线段成比例
+  - 第九讲 相似三角形
+  - 第十讲 位似及相似应用
+  - 第十一讲 锐角三角函数
+  - 第十二讲 数据的分析和概率
+  - 第一讲 二次根式
+  - 第二讲 二次根式的运算
+  - 第三讲 怎么解一元二次方程
+  - 第四讲 不解方程能分析根吗
+  - 第五讲 二次函数的图象
+  - 第六讲 二次函数的性质
+  - 第七讲 怎么求二次函数的解析式
+  - 第十讲 锐角三角函数
+  - 第十一讲 圆有哪些性质
+  - 第十二讲 直线和圆的位置关系
+  - 第一讲 菱形
+  - 第二讲 矩形
+  - 第八讲 反比例函数
+  - 第十二讲 圆有哪些性质
+  - 第五讲 平行线分线段成比例
+  - 第六讲 相似三角形
+  - 第八讲 图形的旋转
+  - 第九讲 圆有哪些性质
+  - 第四讲 二次函数
+  - 第六讲 二次函数的相关计算
+  - 第七讲 阶段复习2
+  - 第一讲 一元二次方程
+  - 第二讲 一元二次方程进阶
+  - 第三讲 一元二次方程的应用
+  - 第六讲 圆
+  - 第七讲 圆周角
+  - 第八讲 与圆有关的位置关系
+  - 第七讲 平行线分线段成比例
+  - 第八讲 相似三角形
+  - 第九讲 锐角三角函数
+  - 第十讲 圆
+  - 第十一讲 圆周角
+  - 第十二讲 与圆有关的位置关系
+  - 第七讲 反比例函数
+  - 第十一讲 圆
+  - 第十二讲 圆周角
+  - 第三讲 一元二次方程
+  - 第四讲 一元二次方程进阶
+  - 第五讲 一元二次方程的应用
+  - 第六讲 二次函数
+  - 第七讲 二次函数的性质
+  - 第八讲 二次函数的相关计算
+  - 第十二讲 圆
+  - 第十二讲 反比例函数
+  - 第八讲 旋转
+  - 第九讲 圆
+  - 第十讲 圆周角
+  - 第十一讲 与圆有关的位置关系
+  - 第十二讲 弧长和扇形
+  - 第1讲 Happy Holiday
+  - 第2讲 Good Communication 1
+  - 第3讲 Good Communication 2
+  - 第4讲 Understanding Yourself 1
+  - 第5讲 Understanding Yourself 2
+  - 第6讲 An Amazing World 1
+  - 第7讲 An Amazing World 2
+  - 第8讲 What a Delicious Meal! 
+  - 第9讲 Technology and Life 1
+  - 第10讲 Technology and Life 2
+  - 第11讲 To Be a Good Learner
+  - 第12讲 Hands-on Fun
+  - 第1讲 A new start 1
+  - 第2讲 A new start 2
+  - 第3讲 Family ties
+  - 第4讲 My favourite subject
+  - 第5讲 Fun clubs and activities
+  - 第6讲 A day in the life
+  - 第7讲 Celebrating birthdays and festivals
+  - 第8讲 Celebrating festivals
+  - 第9讲 The power of plants
+  - 第10讲 A healthy lifestyle
+  - 第11讲 My clothes, my style
+  - 第12讲 Be wise with money
+  - 第一讲 Here and Now
+  - 第二讲 Rain or Shine
+  - 第三讲 A Day to Remember
+  - 第四讲 Once upon a Time
+  - 第五讲 Happy Holiday
+  - 第六讲 Home Sweet Home
+  - 第七讲 Avoid Danger Keep Safe 
+  - 第八讲 Review
+  - 第一讲 Hello!/Keep Tidy!/Welcome!
+  - 第二讲 You and Me
+  - 第三讲 We're Family!
+  - 第四讲 My School
+  - 第五讲 My Favourite Subject
+  - 第六讲 Fun Clubs
+  - 第七讲 Touring the World
+  - 第一讲 Friendship
+  - 第二讲 School life
+  - 第三讲 To be a good learner
+  - 第四讲 Hands-on fun
+  - 第五讲 Wild animals
+  - 第六讲 Seasons
+  - 第七讲 The natural world
+  - 第八讲 Safe and sound
+  - 第一讲 This is me-1
+  - 第二讲 This is me-2
+  - 第三讲 Getting along-1
+  - 第四讲 Getting along-2
+  - 第五讲 Make it happen!-1
+  - 第六讲 Make it happen!-2
+  - 第七讲 Digital life-1
+  - 第八讲 Digital life-2
+  - 第九讲 Play by the rules?-1
+  - 第十讲 Play by the rules?-2
+  - 第十一讲 When disaster strikes-1
+  - 第十二讲 When disaster strikes-2
+  - 第一讲 Happy Holiday
+  - 第二讲 Home Sweet Home
+  - 第三讲 Same or Different?
+  - 第四讲 Amazing Plants and Animals
+  - 第五讲 What a Delicious Meal!
+  - 第六讲 Plan for Yourself
+  - 第七讲 When Tomorrow Comes
+  - 第八讲 Let’s Communicate!
+  - 第一讲 This is me!
+  - 第二讲 Hobbies
+  - 第三讲 Welcome to our school!
+  - 第四讲 School days-1
+  - 第五讲 School days-2
+  - 第六讲 A healthy lifestyle
+  - 第七讲 My clothes, my style-1
+  - 第八讲 My clothes, my style-2
+  - 第九讲 Be wise with money
+  - 第十讲 Let's celebrate!
+  - 第一讲 A new start-1
+  - 第二讲 A new start-2
+  - 第三讲 More than fun-1
+  - 第四讲 More than fun-2
+  - 第五讲 Family ties-1
+  - 第六讲 Family ties-2
+  - 第七讲 Time to celebrate-1
+  - 第八讲 Time to celebrate-2
+  - 第九讲 Fantastic friends-1
+  - 第十讲 Fantastic friends-2
+  - 第十一讲 The power of plants-1
+  - 第十二讲 The power of plants-2
+  - 第一讲 New school, new beginning!
+  - 第二讲 Learning English is fun!
+  - 第三讲 All about me
+  - 第四讲 My family
+  - 第五讲 Animal friends
+  - 第六讲 Let's go!
+  - 第七讲 Days and months
+  - 第八讲 Knowing the world
+  - 第一讲 Let’s Be Friends!-1
+  - 第二讲 Let's be friends!-2
+  - 第三讲 Meet My Family!-1
+  - 第四讲 Meet My Family!-2
+  - 第五讲 Our Colorful School Life-1
+  - 第六讲 Our Colorful School Life-2
+  - 第七讲 Fun in the Sun!-1
+  - 第八讲 Fun in the Sun!-2
+  - 第九讲 Love Mother Nature!-1
+  - 第十讲 Love Mother Nature!-2
+  - 第十一讲 Celebrating the Big Days-1
+  - 第十二讲 Celebrating the Big Days-2
+  - 第七讲 A Day in the Life
+  - 第八讲 Happy Birthday!
+  - 第一讲 五种基本句式+完形+阅读
+  - 第二讲 时态综合一+完形+阅读
+  - 第三讲 时态综合二+听力+写作
+  - 第四讲 定语从句一+本地化题型
+  - 第五讲 定语从句二+完形+阅读
+  - 第六讲 宾语从句一+完形+阅读
+  - 第七讲 宾语从句二+听力+写作
+  - 第八讲 状语从句一+本地化题型
+  - 第九讲 状语从句二+完形+阅读
+  - 第十讲 特殊句式一+完形+阅读
+  - 第十一讲 特殊句式二+听力+写作
+  - 第十二讲 被动语态+完形+阅读
+  - 第一讲 五种基本句型+完形+阅读
+  - Unit 1 How can we become good learners?
+  - Unit 1 Review
+  - Unit 2 I think that mooncakes are delicious!
+  - Unit 2 Review
+  - Unit 3 Could you please tell me where the restrooms are?
+  - Unit 3 Review
+  - Unit 4 I used to be afraid of the dark.
+  - Unit 4 Review
+  - Unit 5 What are the shirts made of?
+  - Unit 5 Review
+  - Unit 6 When was it invented?
+  - Unit 6 Review
+  - 第一讲 长度的测量
+  - 第二讲 运动
+  - 第三讲 运动的计算
+  - 第四讲 声现象
+  - 第五讲 声音的特性
+  - 第六讲 光的反射
+  - 第七讲 光的 折射
+  - 第八讲 透镜
+  - 第九讲 透镜的应用
+  - 第十讲 质量和密度
+  - 第十一讲 密度的测量
+  - 第十二讲 宇宙和粒子
+  - 第三讲 运动计算
+  - 第七讲 光的折射
+  - 第一讲 声现象
+  - 第二讲 声音的特性
+  - 第三讲 光的反射
+  - 第四讲 光的折射
+  - 第五讲 透镜
+  - 第六讲 透镜的应用
+  - 第七讲 初始物态变化
+  - 第八讲 物态变化辨析
+  - 第九讲 长度的测量
+  - 第十讲 运动
+  - 第十一讲 运动计算
+  - 第十二讲 总复习
+  - 第七讲 初识物态变化
+  - 第二讲 运 动
+  - 第三讲 声现象
+  - 第四讲 声音的特性
+  - 第五讲 光的反射
+  - 第六讲 光的折射
+  - 第七讲 透镜
+  - 第八讲 透镜的应用
+  - 第九讲 初识物态变化
+  - 第十讲 物态变化辨析
+  - 第十一讲 质量和密度
+  - 第十二讲 密度的测量
+  - 第一讲 初识物态变化
+  - 第二讲 物态变化辨析
+  - 第三讲 长度的测量
+  - 第四讲 运动
+  - 第五讲 运动计算
+  - 第六讲 声现象
+  - 第七讲 声音的特性
+  - 第八讲 光的反射
+  - 第九讲 光的折射
+  - 第十讲 透镜
+  - 第十一讲 透镜的应用
+  - 第二讲 声现象
+  - 第三讲 声音的特性
+  - 第四讲 光的反射
+  - 第五讲 光的折射
+  - 第六讲 透镜
+  - 第七讲 透镜的应用
+  - 第八讲 初识物态变化
+  - 第九讲 物态变化辨析
+  - 第五讲 初识物态变化
+  - 第六讲 物态变化辨析
+  - 第七讲 光的反射
+  - 第八讲 光的折射
+  - 第九讲 透镜
+  - 第十讲 透镜的应用
+  - 第十二讲 力
+  - 第一讲 初始物态变化
+  - 第四讲 质量和密度
+  - 第五讲 密度的测量
+  - 第六讲 运动
+  - 第七讲 运动计算
+  - 第八讲 声现象
+  - 第九讲 声音的特性
+  - 第十讲 光的反射
+  - 第十一讲 光的折射
+  - 第二讲 运 动 
+  - 第三讲 内能
+  - 第四讲 比热容
+  - 第五讲 内能的利用
+  - 第六讲 电流
+  - 第七讲 电路
+  - 第八讲 电流表和电压表
+  - 第九讲 电压 电阻
+  - 第十讲 欧姆定律
+  - 第十一讲 欧姆定律的应用
+  - 第十二讲 电功率
+  - 第一讲 简单机械
+  - 第二讲 功
+  - 第三讲 机械能和内能
+  - 第一讲 内能
+  - 第二讲 比热容
+  - 第三讲 内能的利用
+  - 第四讲 电流
+  - 第五讲 电路
+  - 第六讲 电流表和电压表
+  - 第七讲 电压 电阻
+  - 第八讲 欧姆定律
+  - 第九讲 欧姆定律的应用
+  - 第十讲 电功率
+  - 第十一讲 生活用电
+  - 第十二讲 电与磁
+  - 第一讲 机械能
+  - 第二讲 内能
+  - 第三讲 比热容
+  - 第四讲 内能的利用
+  - 第五讲 电流
+  - 第六讲 电路
+  - 第七讲 电流表和电压表
+  - 第八讲 电压 电阻
+  - 第九讲 欧姆定律
+  - 第十讲 欧姆定律的应用
+  - 第十一讲 电功率
+  - 第十二讲 生活用电
+  - 第七讲 电压表和电流表
+  - 第一讲 功
+  - 第二讲 机械能和内能
+  - 第一讲 比热容
+  - 第一讲 电流
+  - 第二讲 电路
+  - 第三讲 电流表和电压表
+  - 第四讲 电压 电阻
+  - 第五讲 欧姆定律
+  - 第六讲 欧姆定律的应用
+  - 第七讲 电功率
+  - 第八讲 生活用电
+  - 第十一讲 内能
+  - 第十二讲 比热容
+  - 第一讲 化学与科学探究
+  - 第二讲 常见实验仪器和操作
+  - 第三讲 水的三态变化和人工净化
+  - 第四讲 水的分解与合成
+  - 阶段复习（一）
+  - 第五讲 原子的结构
+  - 第六讲 离子和元素
+  - 第七讲 化学式与化合价
+  - 第八讲 空气
+  - 第九讲 氧气的性质
+  - 第十讲 实验室制取氧气
+  - 阶段复习（二）
+  - 第一讲 溶液的形成和浓度
+  - 第二讲 物质溶解的限度
+  - 第三讲 酸及其性质
+  - 第四讲 碱及其性质
+  - 第五讲 中和反应
+  - 第六讲 海水“晒盐”
+  - 第七讲 碳酸氢钠和碳酸钠
+  - 第八讲 常见的金属材料
+  - 第九讲 金属的化学性质
+  - 第十讲 金属材料的锈蚀与防护
+  - 第十一讲 化学与健康
+  - 第十二讲 化学与社会发展
+  - ​第一讲 化学与实验操作
+  - 第二讲 物质的变化与性质探究
+  - 第三讲 空气成分
+  - 第四讲 分子
+  - 第五讲 原子和离子
+  - 第六讲 元素及水的组成
+  - 第七讲 氧气的性质和用途
+  - 第八讲 氧气的制取
+  - 第九讲 燃烧、灭火、水资源
+  - 第十讲 化学式与化合价
+  - 第十一讲 质量守恒定律
+  - 第十二讲 化学方程式
+  - 第三讲 原子的结构
+  - 第四讲 离子和元素
+  - 第五讲 化学式与化合价
+  - 第六讲 分子、水的净化和组成
+  - 第七讲 物质在水中的溶解
+  - 第一讲 认识化学科学
+  - 第二讲 怎样学习化学
+  - 第三讲 空气的组成
+  - 第四讲 性质活泼的氧气
+  - 第五讲 氧气的制备
+  - 第六讲 水的净化和组成
+  - 第七讲 分子和原子
+  - 第八讲 离子和元素
+  - 第九讲 物质组成的分析和表示
+  - 第十讲 燃烧和灭火
+  - 第十一讲 化学反应中的质量关系
+  - 第九讲 物质组成的表示和分析
+  - 第一讲 化学与实验仪器
+  - 第二讲 体验科学探究
+  - 第三讲 空气资源及其保护
+  - 第四讲 氧气的性质
+  - 第五讲 氧气的制法
+  - 第六讲 分子
+  - 第七讲 原子和离子
+  - 第八讲 元素
+  - 第九讲 水的净化和组成
+  - 第一讲 化学与实验
+  - 第四讲 氧气的性质和制法
+  - 第五讲 分子和原子
+  - 第七讲 巩固复习1
+  - 第八讲 水的净化和组成
+  - 第九讲 化学式和化合价
+  - 第十讲 质量守恒定律
+  - 第十一讲 化学方程式
+  - 第十二讲 巩固复习2
+  - 第三讲 分子
+  - 第四讲 水的净化
+  - 第五讲 水的组成
+  - 第六讲 巩固复习1
+  - 第七讲 原子的结构
+  - 第八讲 离子
+  - 第九讲 元素
+  - 第十一讲 物质构成的表示
+  - 第五讲 水的净化和组成
+  - 第六讲 分子和原子
+  - 第七讲 离子和元素
+  - 第八讲 巩固复习
+  - 第十讲 常见的化学反应——燃烧
+  - 第一讲 溶液的形成
+  - 第二讲 溶解度
+  - 第三讲 溶液组成的定量表示
+  - 第四讲 巩固复习1
+  - 第五讲 酸及其性质
+  - 第六讲 碱及其性质
+  - 第七讲 溶液的酸碱性
+  - 第八讲 巩固复习2
+  - 第九讲 常见的盐
+  - 第十讲 复分解反应
+  - 第十一讲 制盐和制碱工业
+  - 第十二讲 巩固复习3
+  - 第四讲 分子和原子
+  - 第五讲 离子和元素
+  - 第六讲 氧气的性质和制法
+  - 第九讲 物质组成的表示式
+  - 第三讲 分子和原子
+  - 第七讲 溶液的形成
+  - 第八讲 溶液的浓度
+  - 第九讲 空气成分
+  - 第十讲 氧气的性质和制法
+  - 第十一讲 化学式和化合价
+  - 第三讲 光和透镜
+  - 第四讲 感觉世界
+  - 第五讲 力
+  - 第十一讲 人类家园中的水
+  - 第十二讲 物质的溶解
+  - 第十三讲 海水的利用、水的净化
+  - 第十四讲 浮力
+  - 第一讲 科学并不神秘
+  - 第二讲 科学测量及探究
+  - 第三讲 生物与细胞
+  - 第四讲 常见的动物与植物
+  - 第五讲 生物的分类与生物多样性
+  - 第六讲 地球和经纬网
+  - 第七讲 从太阳系到宇宙
+  - 第八讲 运动
+  - 第九讲 运动计算
+  - 第十讲 地球与宇宙
+  - 第十一讲 地质灾害 海陆变迁
+  - 第十二讲 认识技术与工程
+
+
+=== 前30行数据 ===
+
+年级	学科	班型	版本	讲次序号	讲次名称
+六年级	语文	培优	人教版	1	第1讲【阅】理解关键语句
+六年级	语文	培优	人教版	2	第2讲【阅】学习环境描写
+六年级	语文	培优	人教版	3	第3讲【作】学习聚焦情境
+六年级	语文	培优	人教版	4	第4讲【阅】知人论世学古文
+六年级	语文	培优	人教版	5	第5讲【阅】体会说明文语言
+六年级	语文	培优	人教版	6	第6讲【作】学写演讲稿
+六年级	语文	培优	人教版	7	第7讲【阅】学习简短的议论文
+六年级	语文	培优	人教版	8	第8讲【阅】边读边想感受深
+六年级	语文	培优	人教版	9	第9讲【作】变形记
+六年级	语文	培优	人教版	10	第10讲【阅】细读点面场面现
+六年级	语文	培优	人教版	11	第11讲【作】多彩的活动
+六年级	语文	培优	人教版	12	第12讲【复习】期末复习
+五年级	语文	培优	人教版	1	第1讲【阅】巧用表格作概述
+五年级	语文	培优	人教版	2	第2讲【阅】梳理信息找要点
+五年级	语文	培优	人教版	3	第3讲【作】转变视角设情节
+五年级	语文	培优	人教版	4	第4讲【阅】学习重点段
+五年级	语文	培优	人教版	5	第5讲【阅】认识作者的表达目的
+五年级	语文	培优	人教版	6	第6讲【作】____的自述
+五年级	语文	培优	人教版	7	第7讲【阅】学习古典文学名著
+五年级	语文	培优	人教版	8	第8讲【阅】借物抒情须细品
+五年级	语文	培优	人教版	9	第9讲【作】我的心爱之物
+五年级	语文	培优	人教版	10	第10讲【阅】提高阅读的速度
+五年级	语文	培优	人教版	11	第11讲【作】“漫画”老师
+五年级	语文	培优	人教版	12	第12讲【复习】期末复习
+四年级	语文	培优	人教版	1	第1讲【阅】学习把握故事梗概
+四年级	语文	培优	人教版	2	第2讲【作】学习“变身”想象
+四年级	语文	培优	人教版	3	第3讲【阅】学习顶真、反复、引用
+四年级	语文	培优	人教版	4	第4讲【作】学习扩写
+四年级	语文	培优	人教版	5	第5讲【阅】学习评价人物
+四年级	语文	培优	人教版	6	第6讲【作】比较之中找特点

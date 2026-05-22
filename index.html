@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>课程目录 - 未来书房</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="header-title">课程目录</h1>
+      <span class="header-subtitle">未来书房</span>
+    </div>
+  </header>
+
+  <!-- 筛选器区域 -->
+  <section class="filter-section" id="filterSection">
+    <div class="filter-bar">
+      <div class="filter-item">
+        <select id="selectGrade" class="filter-select" data-filter="grade">
+          <option value="">年级</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <select id="selectSubject" class="filter-select" data-filter="subject">
+          <option value="">学科</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <select id="selectClassType" class="filter-select" data-filter="classType">
+          <option value="">班型</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <select id="selectVersion" class="filter-select" data-filter="version">
+          <option value="">版本</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <select id="selectSeason" class="filter-select" data-filter="season">
+          <option value="">季节</option>
+        </select>
+      </div>
+      <button class="reset-btn" id="resetBtn" title="重置筛选">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+
+    <!-- 已选条件提示 -->
+    <div class="filter-hint" id="filterHint">
+      <span class="hint-icon">&#128161;</span>
+      <span>请先选择上方的<span class="highlight">年级 / 学科 / 班型 / 版本 / 季节</span></span>
+    </div>
+
+    <!-- 筛选结果计数 + 汇总海报入口 -->
+    <div class="result-count" id="resultCount" style="display:none;">
+      共 <strong id="countNum">0</strong> 条课程目录
+      <button class="btn-summary-poster" id="btnSummaryPoster" title="查看汇总海报">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        汇总海报
+      </button>
+    </div>
+  </section>
+
+  <!-- 内容区域 -->
+  <main class="content-area" id="contentArea">
+    <!-- 卡片列表由JS动态渲染 -->
+  </main>
+
+  <!-- 空状态 -->
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <div class="empty-icon">&#128218;</div>
+    <p class="empty-text">暂无匹配的课程目录</p>
+    <p class="empty-hint">试试切换其他筛选条件</p>
+  </div>
+
+  <!-- 海报预览弹窗 -->
+  <div class="preview-overlay" id="previewOverlay" style="display:none;">
+    <div class="preview-modal">
+      <div class="preview-header">
+        <span class="preview-title" id="previewTitle">课程目录预览</span>
+        <button class="preview-close" id="previewClose">&times;</button>
+      </div>
+      <div class="preview-body">
+        <img src="" alt="海报预览" id="previewImage" class="preview-image">
+      </div>
+      <div class="preview-tags" id="previewTags"></div>
+      <div class="preview-actions">
+        <button class="btn-download" id="downloadBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          保存到手机
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 加载提示 -->
+  <div class="loading-mask" id="loadingMask" style="display:none;">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">加载中...</p>
+  </div>
+
+  <!-- 底部信息 -->
+  <footer class="footer">
+    <p>&copy; 未来书房 &middot; 课程中心</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
