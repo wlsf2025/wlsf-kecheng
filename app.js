@@ -136,45 +136,59 @@
   }
 
   /**
-   * 渲染预生成海报画廊
-   * 从 posters/ 目录读取所有 JPG，按年级+学科展示缩略图+下载按钮
+   * 全维度切分海报画廊：按 年级×学科×版本×难度 每个组合展示一张
+   * 文件名格式: 未来书房_{年级}_{学科}_{版本}_{班型}_课程大纲.jpg
    */
   function renderPosterGallery() {
     const grid = dom.galleryGrid;
     if (!grid) return;
 
-    // 从数据聚合出所有 年级×学科 组合
-    const grades = [...new Set(state.allData.map(d => d.grade))].sort(gradeSort);
-    const subjects = [...new Set(state.allData.map(d => d.subject))].sort();
-    const SEASON = '暑假';
+    // 按 年级×学科×版本×难度 分组
+    const groups = {};
+    state.allData.forEach(d => {
+      const key = [d.grade, d.subject, d.version, d.classType].join('|');
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(d);
+    });
+
+    // 排序
+    const keys = Object.keys(groups).sort((a, b) => {
+      const [ga, sa, va, ca] = a.split('|');
+      const [gb, sb, vb, cb] = b.split('|');
+      const gd = gradeSort(ga, gb);
+      if (gd !== 0) return gd;
+      if (sa !== sb) return sa.localeCompare(sb, 'zh-CN');
+      if (va !== vb) return va.localeCompare(vb, 'zh-CN');
+      return ca.localeCompare(cb, 'zh-CN');
+    });
 
     let html = '';
     let count = 0;
 
-    grades.forEach(grade => {
-      subjects.forEach(subject => {
-        const items = state.allData.filter(d => d.grade === grade && d.subject === subject);
-        if (items.length === 0) return;
-        count++;
+    keys.forEach(key => {
+      const [grade, subject, version, classType] = key.split('|');
 
-        const filename = `未来书房_${grade}_${subject}_${SEASON}_课程上新.jpg`;
-        const stage = isPrimarySchool(grade) ? '小学' : '初中';
+      // 文件名匹配新格式（去掉括号）
+      const safeVersion = version.replace(/[()（）]/g, '');
+      const filename = `未来书房_${grade}_${subject}_${safeVersion}_${classType}_课程大纲.jpg`;
+      const posterUrl = `posters/${filename}`;
 
-        // 预生成海报路径
-        const posterUrl = `posters/${filename}`;
-
-        html += `
-          <div class="gallery-item" onclick="window.open('${posterUrl}','_blank')" title="点击下载 ${stage}${subject} 课程海报">
-            <img src="${posterUrl}" alt="${grade} ${subject}" loading="lazy" onerror="this.parentElement.style.display='none'">
-            <div class="gallery-label"><span>${grade} · ${subject}</span></div>
-            <div class="gallery-download-hint">下载</div>
-          </div>
-        `;
-      });
+      count++;
+      html += `
+        <div class="gallery-item" onclick="window.open('${posterUrl}','_blank')"
+             title="点击下载 ${grade} · ${subject} · ${version} · ${classType} 课程大纲">
+          <img src="${posterUrl}" alt="${grade} ${subject} ${version} ${classType}" loading="lazy"
+               onerror="this.parentElement.style.display='none'">
+          <div class="gallery-label"><span>${grade}·${subject}</span></div>
+          <div class="gallery-label-sub">${version} · ${classType}</div>
+          <div class="gallery-download-hint">下载</div>
+        </div>
+      `;
     });
 
     if (count > 0) {
       grid.innerHTML = html;
+      document.getElementById('galleryCount').textContent = `共 ${count} 张课程大纲海报`;
     } else {
       document.getElementById('posterGallery').style.display = 'none';
     }
