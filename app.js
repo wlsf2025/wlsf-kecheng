@@ -36,6 +36,9 @@
     guideBanner:     document.getElementById('guideBanner'),
     guideDismiss:    document.getElementById('guideDismiss'),
     galleryGrid:     document.getElementById('galleryGrid'),
+    galleryToggle:    document.getElementById('galleryToggle'),
+    posterGallery:    document.getElementById('posterGallery'),
+    toggleIcon:      document.getElementById('galleryToggleIcon'),
   };
 
   // ===== 状态 =====
@@ -109,6 +112,16 @@
     });
     dom.downloadBtn.addEventListener('click', onDownload);
     dom.btnSummaryPoster.addEventListener('click', showSummaryPoster);
+
+    // 画廊折叠/展开
+    if (dom.galleryToggle) {
+      dom.galleryToggle.addEventListener('click', function() {
+        const isCollapsed = dom.posterGallery.classList.toggle('collapsed');
+        dom.toggleIcon.classList.toggle('rotated', !isCollapsed);
+        this.querySelector('.gallery-toggle-hint').textContent =
+          isCollapsed ? '点击展开' : '点击收起';
+      });
+    }
 
     // 操作引导关闭
     if (dom.guideDismiss) {
@@ -188,9 +201,12 @@
 
     if (count > 0) {
       grid.innerHTML = html;
-      document.getElementById('galleryCount').textContent = `共 ${count} 张课程大纲海报`;
+      document.getElementById('galleryCount').textContent = `共 ${count} 张 · 按年级×学科×版本×难度整理`;
+      // 更新折叠栏的提示文字
+      const hint = document.getElementById('galleryToggleHint');
+      if (hint) hint.textContent = `共 ${count} 张 · 点击展开`;
     } else {
-      document.getElementById('posterGallery').style.display = 'none';
+      document.getElementById('posterGallerySection').style.display = 'none';
     }
   }
 

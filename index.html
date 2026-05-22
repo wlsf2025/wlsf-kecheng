@@ -72,17 +72,6 @@
         汇总海报
       </button>
     </div>
-
-    <!-- 预生成海报快速下载区 -->
-    <div class="poster-gallery" id="posterGallery">
-      <div class="gallery-header">
-        <h3 class="gallery-title">📥 全部课程大纲海报（直接下载）</h3>
-        <span class="gallery-desc" id="galleryCount">按年级×学科×版本×难度整理的课程大纲 JPG，点击即可保存</span>
-      </div>
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- JS 动态渲染 -->
-      </div>
-    </div>
   </section>
 
   <!-- 内容区域 -->
@@ -122,6 +111,24 @@
     <div class="loading-spinner"></div>
     <p class="loading-text">加载中...</p>
   </div>
+
+  <!-- 海报画廊（独立区块，可折叠） -->
+  <section class="poster-gallery-section" id="posterGallerySection">
+    <div class="gallery-toggle" id="galleryToggle">
+      <span class="gallery-toggle-title">📥 课程大纲海报下载</span>
+      <span class="gallery-toggle-hint" id="galleryToggleHint">共 246 张 · 点击展开</span>
+      <svg class="gallery-toggle-icon" id="galleryToggleIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+    </div>
+    <div class="poster-gallery collapsed" id="posterGallery">
+      <div class="gallery-header">
+        <h3 class="gallery-title">全部课程大纲海报（点击即可保存到手机/电脑）</h3>
+        <span class="gallery-desc" id="galleryCount">按年级×学科×版本×难度整理的课程大纲 JPG</span>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+    </div>
+  </section>
 
   <!-- 底部信息 -->
   <footer class="footer">
