@@ -33,6 +33,9 @@
     downloadBtn:    document.getElementById('downloadBtn'),
     loadingMask:    document.getElementById('loadingMask'),
     btnSummaryPoster: document.getElementById('btnSummaryPoster'),
+    guideBanner:     document.getElementById('guideBanner'),
+    guideDismiss:    document.getElementById('guideDismiss'),
+    galleryGrid:     document.getElementById('galleryGrid'),
   };
 
   // ===== 状态 =====
@@ -49,6 +52,8 @@
     populateFilters();
     bindEvents();
     showHint();
+    initGuide();
+    renderPosterGallery();
   }
 
   // ===== 1. 填充筛选器下拉选项（从数据动态聚合） =====
@@ -105,9 +110,74 @@
     dom.downloadBtn.addEventListener('click', onDownload);
     dom.btnSummaryPoster.addEventListener('click', showSummaryPoster);
 
+    // 操作引导关闭
+    if (dom.guideDismiss) {
+      dom.guideDismiss.addEventListener('click', function() {
+        dom.guideBanner.classList.add('hidden');
+        try { localStorage.setItem('catalog_guide_dismissed', '1'); } catch(e) {}
+      });
+    }
+
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closePreview();
     });
+  }
+
+  /**
+   * 操作引导初始化
+   * 用户关过一次就不再显示
+   */
+  function initGuide() {
+    try {
+      if (localStorage.getItem('catalog_guide_dismissed')) {
+        dom.guideBanner.classList.add('hidden');
+      }
+    } catch(e) {}
+  }
+
+  /**
+   * 渲染预生成海报画廊
+   * 从 posters/ 目录读取所有 JPG，按年级+学科展示缩略图+下载按钮
+   */
+  function renderPosterGallery() {
+    const grid = dom.galleryGrid;
+    if (!grid) return;
+
+    // 从数据聚合出所有 年级×学科 组合
+    const grades = [...new Set(state.allData.map(d => d.grade))].sort(gradeSort);
+    const subjects = [...new Set(state.allData.map(d => d.subject))].sort();
+    const SEASON = '暑假';
+
+    let html = '';
+    let count = 0;
+
+    grades.forEach(grade => {
+      subjects.forEach(subject => {
+        const items = state.allData.filter(d => d.grade === grade && d.subject === subject);
+        if (items.length === 0) return;
+        count++;
+
+        const filename = `未来书房_${grade}_${subject}_${SEASON}_课程上新.jpg`;
+        const stage = isPrimarySchool(grade) ? '小学' : '初中';
+
+        // 预生成海报路径
+        const posterUrl = `posters/${filename}`;
+
+        html += `
+          <div class="gallery-item" onclick="window.open('${posterUrl}','_blank')" title="点击下载 ${stage}${subject} 课程海报">
+            <img src="${posterUrl}" alt="${grade} ${subject}" loading="lazy" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-label"><span>${grade} · ${subject}</span></div>
+            <div class="gallery-download-hint">下载</div>
+          </div>
+        `;
+      });
+    });
+
+    if (count > 0) {
+      grid.innerHTML = html;
+    } else {
+      document.getElementById('posterGallery').style.display = 'none';
+    }
   }
 
   // ===== 3. 核心筛选逻辑 =====

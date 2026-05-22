@@ -17,6 +17,16 @@
 
   <!-- 筛选器区域 -->
   <section class="filter-section" id="filterSection">
+    <!-- 操作引导 -->
+    <div class="guide-banner" id="guideBanner">
+      <div class="guide-icon">👆</div>
+      <div class="guide-text">
+        <strong>如何使用？</strong>
+        <span class="guide-steps">1. 先选年级和学科 → 2. 查看课程列表 → 3. 点汇总海报一键下载 JPG</span>
+      </div>
+      <button class="guide-dismiss" id="guideDismiss" title="我知道了">&times;</button>
+    </div>
+
     <div class="filter-bar">
       <div class="filter-item">
         <select id="selectGrade" class="filter-select" data-filter="grade">
@@ -61,6 +71,17 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
         汇总海报
       </button>
+    </div>
+
+    <!-- 预生成海报快速下载区 -->
+    <div class="poster-gallery" id="posterGallery">
+      <div class="gallery-header">
+        <h3 class="gallery-title">📥 全部课程海报（直接下载）</h3>
+        <span class="gallery-desc">按年级+学科整理好的课程大纲 JPG，点击即可保存到手机/电脑</span>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- JS 动态渲染 -->
+      </div>
     </div>
   </section>
 
